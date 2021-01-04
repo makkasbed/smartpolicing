@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Case {
     String id, case_type, created_at, updated_at, user_id, complainant, complainant_id, id_type, details, district_id,
-            town, station;
+            town, station, status;
 
     List<Evidence> evidences;
 
     public Case(String id, String case_type, String created_at, String updated_at, String user_id, String complainant,
             String complainant_id, String id_type, String details, String district_id, String town,
-            List<Evidence> evidences, String station) {
+            List<Evidence> evidences, String station, String status) {
         this.id = id;
         this.case_type = case_type;
         this.created_at = created_at;
@@ -24,6 +24,11 @@ public class Case {
         this.town = town;
         this.evidences = evidences;
         this.station = station;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public String getId() {
@@ -128,5 +133,9 @@ public class Case {
 
     public void setStation(String station) {
         this.station = station;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
